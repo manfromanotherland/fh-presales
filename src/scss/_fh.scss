@@ -1,0 +1,77 @@
+// Responsive typography
+
+html {
+  font-size: 16px;
+  font-weight: 300;
+  @include media-breakpoint-up(md) { font-size: 18px; }
+  @include media-breakpoint-up(lg) { font-size: 20px; }
+  @include media-breakpoint-up(xl) { font-size: 22px; }
+}
+
+strong { font-weight: 500; }
+
+// Hero caption
+
+.hero {
+
+	.figure-caption {
+		position: absolute;
+		top: 100%;
+		right: 25px;
+		line-height: $line-height-sm;
+		transform: translateY(-200%);
+		color: white;
+		opacity: 0;
+		transition: opacity .2s;
+
+		@include media-breakpoint-down(md) {
+			opacity: 1;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	&:hover .figure-caption {
+		opacity: 1;
+	}
+
+}
+
+// Logo + Opening
+// ----------------------------------------------
+
+.logo {
+	display: block;
+	max-width: 40%;
+	height: auto;
+	margin: 2rem 0;
+	transform: translateX(-51.5%);
+
+	@include media-breakpoint-up(md) {
+		margin: 3rem 0;
+	}
+}
+
+.opening span {
+	display: block;
+
+	@include media-breakpoint-down(lg) {
+		display: inline;
+	}
+}
+
+
+// Form
+// ----------------------------------------------
+
+#mc_embed_signup {
+	width: 100%;
+	margin-bottom: 3rem;
+}
+
+// Custom boostrap colors
+// ----------------------------------------------
+
+.input-group { width: 100% !important; }
