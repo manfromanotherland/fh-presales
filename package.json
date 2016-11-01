@@ -14,6 +14,7 @@
   "scripts": {
     "clean": "rm -f dist/{css/*,js/*,img/*}",
     "deploy": "rsync -avCP --delete --include=.htaccess --exclude=node_modules --exclude=src --exclude=package.json /Users/edmundo/Sites/fhtype/* ed@fabiohaagtype.com:/var/www/fabiohaagtype.com/html/",
+    "deploy:br": "rsync -avCP --delete --include=.htaccess --exclude=node_modules --exclude=src --exclude=package.json /Users/edmundo/Sites/fhtype/br/* ed@fabiohaagtype.com:/var/www/fabiohaagtype.com.br/html/",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "imagemin": "imagemin src/img dist/img -p",
@@ -22,7 +23,8 @@
     "build:images": "npm run imagemin",
     "build:all": "npm run build:css && npm run build:images",
     "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
-    "watch:all": "npm-run-all -p serve watch:css",
+    "watch:images": "onchange 'src/img/*' -- npm run build:images",
+    "watch:all": "npm-run-all -p serve watch:css watch:images",
     "postinstall": "npm run build:all && npm run watch:all"
   },
   "devDependencies": {
