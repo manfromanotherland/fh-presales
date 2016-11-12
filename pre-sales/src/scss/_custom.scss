@@ -1,0 +1,33 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+// Options
+
+$enable-transitions: true;
+
+// Colors
+
+$gray-dark: #282425;
+$brand-primary: $gray-dark;
+
+// Links
+
+$link-hover-decoration: none;
+
+// Typography
+
+$font-family-sans-serif: 'roboto', sans-serif;
+
+$font-size-root: 18px;
+$line-height-base: 1.7;
+
+// Buttons
+
+$btn-active-box-shadow: none;
+$btn-font-weight: 300;
+
+// Figures
+
+$figure-caption-font-size: 60%;

@@ -1,0 +1,34 @@
+{
+  "name": "fhtype",
+  "version": "1.0.0",
+  "description": "Fabio Haag Type, landing page",
+  "author": "Edmundo Santos <hello@edmundojr.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edmundojr/fabiohaagtype.com/issues"
+  },
+  "scripts": {
+    "clean": "rm -f dist/{css/*,js/*,img/*}",
+    "deploy": "rsync -avCP --delete --include=.htaccess --exclude=node_modules --exclude=src --exclude=package.json /Users/edmundo/Sites/fhtype/pre-sale/* ed@fabiohaagtype.com:/var/www/fabiohaagtype.com/html/pre-sale/",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "imagemin": "imagemin src/img dist/img -p",
+    "serve": "browser-sync start --server --files 'dist/css/*.css, dist/js/*.js, **/*.html, !node_modules/**/*.html'",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:images": "npm run imagemin",
+    "build:all": "npm run build:css && npm run build:images",
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
+    "watch:images": "onchange 'src/img/*' -- npm run build:images",
+    "watch:all": "npm-run-all -p serve watch:css watch:images",
+    "postinstall": "npm run build:all && npm run watch:all"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.1",
+    "browser-sync": "^2.11.1",
+    "imagemin-cli": "^2.1.0",
+    "node-sass": "^3.4.2",
+    "npm-run-all": "^1.5.1",
+    "onchange": "^2.0.0",
+    "postcss-cli": "^2.4.0"
+  }
+}

@@ -1,0 +1,8 @@
+// Responsive typography
+
+html {
+  font-size: 12px;
+  font-weight: 300;
+  @include media-breakpoint-up(lg) { font-size: 14px; }
+  @include media-breakpoint-up(xl) { font-size: 18px; }
+}
