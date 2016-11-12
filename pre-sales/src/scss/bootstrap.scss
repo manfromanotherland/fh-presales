@@ -16,7 +16,8 @@
 
 // Core CSS
 @import "reboot";
-// @import "type";
+@import "type";
+@import "lembra";
 @import "images";
 // @import "code";
 @import "grid";
@@ -52,7 +53,3 @@
 
 // Utility classes
 @import "utilities";
-
-// Site's CSS
-
-@import "fh";
