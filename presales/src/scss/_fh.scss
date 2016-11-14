@@ -16,6 +16,12 @@ html {
 
 ::selection { background: rgba(0,0,0,.05); }
 
+// Small Caps
+
+.small-caps {
+	font-variant-caps: all-small-caps;
+}
+
 //
 // Logo
 // ----------------------------------------------------------------------------
@@ -201,7 +207,7 @@ html {
 		margin-top: 1rem;
 		font-size: 1.6rem;
 		font-weight: 800;
-		font-variant-caps: small-caps;
+		font-variant-caps: all-small-caps;
 		line-height: $line-height-sm;
 
 		span {
@@ -260,6 +266,10 @@ html {
 	padding: ($spacer) ($spacer * 2) ($spacer / 3);
 	background: #f4f4f4;
 	margin: ($spacer * 2) auto;
+
+	input[type=image]:hover {
+		opacity: .8;
+	}
 }
 
 //
