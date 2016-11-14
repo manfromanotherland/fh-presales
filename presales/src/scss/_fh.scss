@@ -4,6 +4,7 @@
 
 html {
 	font-size: 16px;
+	font-feature-settings: "liga";
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
@@ -19,6 +20,7 @@ html {
 // Small Caps
 
 .small-caps {
+	font-feature-settings: "onum", "c2sc", "smcp", "liga";
 	font-variant-caps: all-small-caps;
 }
 
@@ -82,21 +84,30 @@ html {
 	// 2015 – 2017
 
 	&--fine-typography {
-		padding: ($spacer * 1) 0;
+		padding: ($spacer * .75) 0;
 		background: #677b9c;
 
-		@include media-breakpoint-up(lg) { padding: ($spacer * 1) 0; }
-		@include media-breakpoint-up(xl) { padding: ($spacer * 1) 0; }
+		@include media-breakpoint-up(lg) { padding: ($spacer * .75) 0; }
+		@include media-breakpoint-up(xl) { padding: ($spacer * .75) 0; }
 	}
 
 	// Licensing
 
-	&--licensing h2 {
-		font-size: 4.25vw;
-		font-weight: 300;
-		font-style: italic;
-		letter-spacing: .20em;
-		color: #b9a573;
+	&--licensing {
+		color: #3c3b41;
+
+		h2 {
+			font-size: 4.25vw;
+			font-weight: 300;
+			font-style: italic;
+			letter-spacing: .20em;
+			color: #b9a573;
+		}
+
+		form ~ p {
+			font-feature-settings: "onum", "liga";
+			color: #000;
+		}
 	}
 
 	// Backgrounds
@@ -236,7 +247,7 @@ html {
 		}
 
 		&--off {
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 
 			&::before {
 				position: absolute;
