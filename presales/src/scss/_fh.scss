@@ -1,4 +1,6 @@
-// Responsive typography
+//
+// Base
+// ----------------------------------------------------------------------------
 
 html {
 	font-size: 16px;
@@ -12,11 +14,11 @@ html {
 
 // Text Selection
 
-::selection {
-	background: rgba(0,0,0,.05);
-}
+::selection { background: rgba(0,0,0,.05); }
 
+//
 // Logo
+// ----------------------------------------------------------------------------
 
 .logo {
 	max-width: 220px;
@@ -31,7 +33,9 @@ html {
 	@include media-breakpoint-up(xl) { max-width: 342px; }
 }
 
+//
 // Sections
+// ----------------------------------------------------------------------------
 
 .section {
 	padding: ($spacer * 3) 0;
@@ -136,7 +140,9 @@ html {
 	}
 }
 
-// Price Table
+//
+// Price table
+// ----------------------------------------------------------------------------
 
 .price {
 	display: flex;
@@ -244,6 +250,21 @@ html {
 		}
 	}
 }
+
+//
+// Paypal Form
+// ----------------------------------------------------------------------------
+
+.paypal {
+	max-width: 420px;
+	padding: ($spacer) ($spacer * 2) ($spacer / 3);
+	background: #f4f4f4;
+	margin: ($spacer * 2) auto;
+}
+
+//
+// Social Icons
+// ----------------------------------------------------------------------------
 
 .social-icons {
 	padding: 0;
