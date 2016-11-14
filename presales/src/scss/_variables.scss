@@ -112,7 +112,7 @@ $body-color: #000 !default;
 //
 // Style anchor elements.
 
-$link-color:            $brand-primary !default;
+$link-color:            #000 !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 30%) !default;
 $link-hover-decoration: underline !default;
