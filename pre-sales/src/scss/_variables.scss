@@ -42,13 +42,13 @@
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 #373a3c !default;
+$gray-dark:                 #3f3e43 !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #0275d8 !default;
+$brand-primary:             $gray-dark !default;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
@@ -60,12 +60,12 @@ $brand-inverse:             $gray-dark !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-flex:               false !default;
+$enable-flex:               true !default;
 $enable-rounded:            true !default;
-$enable-shadows:            false !default;
-$enable-gradients:          false !default;
-$enable-transitions:        false !default;
-$enable-hover-media-query:  false !default;
+$enable-shadows:            true !default;
+$enable-gradients:          true !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  true !default;
 $enable-grid-classes:       true !default;
 $enable-print-styles:       true !default;
 
@@ -115,7 +115,7 @@ $body-color: $gray-dark !default;
 $link-color:            $brand-primary !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 
 // Grid breakpoints
@@ -138,10 +138,10 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
+  sm: 400px,
+  md: 580px,
+  lg: 820px,
+  xl: 1000px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -151,7 +151,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:               12 !default;
-$grid-gutter-width-base:     30px !default;
+$grid-gutter-width-base:     50px !default;
 $grid-gutter-widths: (
   xs: $grid-gutter-width-base,
   sm: $grid-gutter-width-base,
@@ -164,20 +164,20 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: 'Lembra', sans-serif !default;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
-$font-size-root: 16px !default;
+$font-size-root: 20px !default;
 
 $font-size-base: 1rem !default;
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 $font-size-xs:   .75rem !default;
 
-$line-height-base: 1.5 !default;
+$line-height-base: 1.4 !default;
 
 $font-size-h1: 2.5rem !default;
 $font-size-h2: 2rem !default;
@@ -203,7 +203,7 @@ $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
 
 $lead-font-size:   1.25rem !default;
-$lead-font-weight: 300 !default;
+$lead-font-weight: 600 !default;
 
 $small-font-size: 80% !default;
 
@@ -234,7 +234,7 @@ $list-inline-padding: 5px !default;
 // Define common padding and border radius sizes and more.
 
 $line-height-lg:         (4 / 3) !default;
-$line-height-sm:         1.5 !default;
+$line-height-sm:         1 !default;
 
 $border-radius:          .25rem !default;
 $border-radius-lg:       .3rem !default;
