@@ -108,13 +108,14 @@ html {
 			font-feature-settings: "onum", "liga";
 			color: #000;
 		}
+
+		form + p { margin-bottom: 4rem; }
 	}
 
 	// Backgrounds
 
 	&--bg {
 		padding: ($spacer * 3) 0;
-		// background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
