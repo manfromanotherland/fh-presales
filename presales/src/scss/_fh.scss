@@ -1,0 +1,310 @@
+//
+// Base
+// ----------------------------------------------------------------------------
+
+html {
+	font-size: 16px;
+	font-feature-settings: "liga";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@include media-breakpoint-up(md) { font-size: 18px; }
+	@include media-breakpoint-up(lg) { font-size: 20px; }
+	@include media-breakpoint-up(xl) { font-size: 22px; }
+}
+
+// Text Selection
+
+::selection { background: rgba(0,0,0,.05); }
+
+// Small Caps
+
+.small-caps {
+	font-feature-settings: "onum", "c2sc", "smcp", "liga";
+	font-variant-caps: all-small-caps;
+}
+
+//
+// Logo
+// ----------------------------------------------------------------------------
+
+.logo {
+	max-width: 220px;
+	height: auto;
+	margin: 5% auto 10%;
+
+	&--footer {
+		margin: 3% auto;
+	}
+
+	@include media-breakpoint-up(md) { max-width: 300px; }
+	@include media-breakpoint-up(xl) { max-width: 342px; }
+}
+
+//
+// Sections
+// ----------------------------------------------------------------------------
+
+.section {
+	padding: ($spacer * 3) 0;
+
+	@include media-breakpoint-up(lg) { padding: ($spacer * 4) 0; }
+	@include media-breakpoint-up(xl) { padding: ($spacer * 5) 0; }
+
+	// Lembra
+
+	&--lembra { background: #3f3e43; }
+
+	// Crossroads
+
+	&--crossroads {
+		background: url(../img/bg_crossroads.png) no-repeat top right;
+		background-size: auto 100%;
+
+		@include media-breakpoint-up(lg) { padding: ($spacer * 2) 0; }
+		@include media-breakpoint-up(xl) { padding: ($spacer * 3) 0; }
+
+		img { max-width: 70%; }
+	}
+
+	// neo
+
+	&--neo { background: #da5b35; }
+
+	// Design your future.
+
+	&--future {
+		background: #3f3e43;
+
+		@include media-breakpoint-up(lg) { padding: ($spacer * 5) 0; }
+		@include media-breakpoint-up(xl) { padding: ($spacer * 6) 0; }
+	}
+
+	// Packed with everything for Fine Typography
+	// 2015 – 2017
+
+	&--fine-typography {
+		padding: ($spacer * .75) 0;
+		background: #677b9c;
+
+		@include media-breakpoint-up(lg) { padding: ($spacer * .75) 0; }
+		@include media-breakpoint-up(xl) { padding: ($spacer * .75) 0; }
+	}
+
+	// Licensing
+
+	&--licensing {
+		color: #3c3b41;
+
+		h2 {
+			font-size: 4.25vw;
+			font-weight: 300;
+			font-style: italic;
+			letter-spacing: .20em;
+			color: #b9a573;
+		}
+
+		form ~ p {
+			font-feature-settings: "onum", "liga";
+			color: #000;
+		}
+
+		form + p { margin-bottom: 4rem; }
+	}
+
+	// Backgrounds
+
+	&--bg {
+		padding: ($spacer * 3) 0;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		img { max-width: 85%; }
+
+		@include media-breakpoint-up(lg) { padding: ($spacer * 5) 0; }
+		@include media-breakpoint-up(xl) { padding: ($spacer * 6) 0; }
+	}
+
+	&--sketch {
+		min-height: 50vh;
+		background-image: url("../img/bg_sketch.jpg");
+	}
+
+	&--exhibition  { background-image: url("../img/bg_exhibition.jpg"); }
+	&--photography { background-image: url("../img/bg_photography.jpg"); }
+	&--workshop    { background-image: url("../img/bg_workshop.jpg"); }
+
+	&--business {
+		padding-top: ($spacer * 2);
+		padding-bottom: 0;
+		background-color: #b9a573;
+
+		@include media-breakpoint-up(lg) { padding-top: ($spacer * 4); }
+		@include media-breakpoint-up(xl) { padding-top: ($spacer * 5); }
+
+		img {
+			max-width: 100%;
+			margin-bottom: ($spacer * 1.5);
+
+			@include media-breakpoint-up(lg) { padding-top: ($spacer * 2); }
+			@include media-breakpoint-up(xl) { padding-top: ($spacer * 2.5); }
+		}
+
+		&--bg {
+			padding: ($spacer * 5) 0;
+			background-image: url("../img/bg_business.jpg");
+		}
+	}
+}
+
+//
+// Price table
+// ----------------------------------------------------------------------------
+
+.price {
+	display: flex;
+	flex-direction: column;
+	padding-top: ($spacer);
+	padding-bottom: ($spacer);
+	margin-top: ($spacer * 2);
+	margin-bottom: ($spacer * 2);
+
+	@include media-breakpoint-down(md) {
+		padding-top: ($spacer / 2);
+		padding-bottom: ($spacer / 2);
+		margin-top: ($spacer);
+		margin-bottom: ($spacer);
+	}
+
+	// Separators
+
+	& + & {
+		box-shadow: -1px 0 0 #d0c3a2;
+
+		@include media-breakpoint-down(md) {
+			box-shadow: none;
+			&:nth-child(even) { box-shadow: -1px 0 0 #d0c3a2; }
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding-top: ($spacer * 2);
+			box-shadow: 0 -1px 0 #d0c3a2;
+			&:nth-child(even) { box-shadow: 0 -1px 0 #d0c3a2; }
+		}
+	}
+
+	&__title {
+		margin-bottom: ($spacer);
+		font-size: 1.4rem;
+		font-weight: 800;
+		font-variant-caps: small-caps;
+		white-space: nowrap;
+	}
+
+	&__list {
+		flex-grow: 1;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		&__item {
+			margin: ($spacer / 2) 0;
+		}
+	}
+
+	&__price {
+		position: relative;
+		display: inline-block;
+		margin-top: 1rem;
+		font-size: 1.6rem;
+		font-weight: 800;
+		font-variant-caps: all-small-caps;
+		line-height: $line-height-sm;
+
+		span {
+			display: block;
+			font-size: 1rem;
+		}
+
+		&--original {
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: #b2b2b2;
+
+			span { font-size: .8rem; }
+
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 100px;
+				height: 2px;
+				background: #da5b35;
+				transform-origin: center;
+				transform: rotate(-25deg) translate(-50%);
+				content: "";
+			}
+		}
+
+		&--off {
+			font-size: 1.6rem;
+
+			&::before {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 40px;
+				height: 40px;
+				padding: 8px;
+				font-size: 12px;
+				line-height: $line-height-sm;
+				color: #fff;
+				background: #da5b35;
+				border-radius: 50%;
+				transform: translate(100%,-35%);
+				content: "60% off";
+			}
+		}
+	}
+}
+
+//
+// Paypal Form
+// ----------------------------------------------------------------------------
+
+.paypal {
+	max-width: 420px;
+	padding: ($spacer) ($spacer * 2) ($spacer / 3);
+	background: #f4f4f4;
+	margin: ($spacer * 2) auto;
+
+	input[type=image]:hover {
+		opacity: .8;
+	}
+}
+
+//
+// Social Icons
+// ----------------------------------------------------------------------------
+
+.social-icons {
+	padding: 0;
+	list-style: none;
+	text-align: center;
+
+	&__item {
+		display: inline-block;
+		margin: 0 10px;
+
+		&__link {
+			display: block;
+			transition: opacity .3s;
+
+			&:hover,
+			&:focus {
+				opacity: .75;
+			}
+		}
+	}
+}

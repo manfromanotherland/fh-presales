@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>icn_facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-543.000000, -1687.000000)">
+            <g id="social-icons" transform="translate(479.000000, 1687.000000)">
+                <g id="icn_facebook" transform="translate(64.000000, 0.000000)">
+                    <rect id="Rectangle-7" fill="#557CB7" x="0" y="0" width="55" height="55"></rect>
+                    <path d="M21,22.185 L23.87,22.185 L23.87,19.395 C23.87,18.164 23.901,16.267 24.795,15.092 C25.736,13.847 27.028,13 29.251,13 C32.873,13 34.397,13.517 34.397,13.517 L33.681,17.771 C33.681,17.771 32.483,17.424 31.368,17.424 C30.251,17.424 29.251,17.825 29.251,18.941 L29.251,22.185 L33.829,22.185 L33.51,26.34 L29.251,26.34 L29.251,40.774 L23.87,40.774 L23.87,26.34 L21,26.34 L21,22.185 Z" id="Fill-3" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
